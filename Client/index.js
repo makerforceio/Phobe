@@ -13,7 +13,7 @@ var filepath = path.join(__dirname, "id.bin");
 
 var socket = net.Socket()
 
-socket.on("connect", (socket) -> {
+socket.connect({port:41337, address:"makerforce.io"}, (socket) -> {
 	var id;
 	fs.readFile(filepath, (err, data) => {
 		if(err){
@@ -24,7 +24,7 @@ socket.on("connect", (socket) -> {
 	});
 	socket.write(0x41);
 	socket.write(id);
-	socket.on("data", (err, data) => {
+	socket.on("data", (data) => {
 		switch(data[0]){
 			case 0x51:
 				setInterval(() => {
