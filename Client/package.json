@@ -6,7 +6,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-   
+    "serialport": "^2.0.6"
   },
   "private": true
 }
