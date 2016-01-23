@@ -18,8 +18,11 @@ socket.connect((socket) => {
 	});
 	socket.write(0x41);
 	socket.write(id);
-	while(socket.read() != 0x51){}
-	setInterval(() -> {
-		socket.write(0x40);
-	}, 500);
+});
+socket.data((err, data) => {
+	if(data == 0x51){
+		setInterval(() -> {
+			socket.write(0x40);
+		}, 500);
+	}
 });
