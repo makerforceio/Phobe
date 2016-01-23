@@ -7,7 +7,7 @@ var filepath = path.join(__dirname, "id.bin");
 
 var socket = net.Socket()
 
-socket.connect((socket) => {
+socket.on("connect", (socket) => {
 	var id;
 	fs.readFile(filepath, (err, data) => {
 		if(err){
@@ -18,11 +18,11 @@ socket.connect((socket) => {
 	});
 	socket.write(0x41);
 	socket.write(id);
-});
-socket.data((err, data) => {
-	if(data == 0x51){
-		setInterval(() -> {
-			socket.write(0x40);
-		}, 500);
-	}
+	socket.on("data", (err, data) => {
+		if(data == 0x51){
+			setInterval(() -> {
+				socket.write(0x40);
+			}, 500);
+		}
+	});
 });
