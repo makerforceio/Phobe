@@ -1,14 +1,14 @@
 module.exports = (mongoose) => {
 	var Schema = mongoose.Schema;
 
-	var Camera = mongoose.model('Camera', {
+	var Bot = mongoose.model('Bot', {
 		hex: String,
 		lastup: Date,
 
 	});
 	
 	return {
-		Camera: Camera
+		Bot: Bot
 	};
 
 };
