@@ -1,0 +1,51 @@
+@import "normalize-scss-3.0.2-normalize.3.0.2/normalize";
+
+$theme_color_50:	#FFF8E1;
+$theme_color_100:	#FFECB3;
+$theme_color_200:	#FFE082;
+$theme_color_300:	#FFD54F;
+$theme_color_400:	#FFCA28;
+$theme_color_500:	#FFC107;
+$theme_color_600:	#FFB300;
+$theme_color_700:	#FFA000;
+$theme_color_800:	#FF8F00;
+$theme_color_900:	#FF6F00;
+
+$theme_color_alpha:	$theme_color_500;
+$theme_color_beta:	$theme_color_400;
+$theme_color_gamma:	#FFFFFF;
+$theme_color_delta:	#3D3D3D;
+
+body {
+	font-family: "Roboto Slab", sans-serif;
+}
+
+nav {
+	background-color: $theme_color_alpha;
+	color: $theme_color_gamma;
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:link {
+			@extend a;
+		}
+		&:hover {
+			@extend a;
+		}
+		&:active {
+			@extend a;
+		}
+		&:visited {
+			@extend a;
+		}
+	}
+	.brand {
+		.icon {
+
+		}
+		.name {
+			font-size: 24px;
+		}	
+	}
+}
