@@ -1,0 +1,12 @@
+{
+  "name": "Phobe-client",
+  "version": "0.0.1",
+  "description": "Phobe-client",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+   
+  },
+  "private": true
+}
