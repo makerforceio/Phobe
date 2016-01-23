@@ -5,7 +5,7 @@ var net = require('net');
 
 mongoose.connect('mongodb://phobe:phobe123@localhost/phobe');
 var models = require("./models")(mongoose);
-var Camera = models.Camera;
+var Bot = models.Bot;
 
 var app = express();
 
@@ -20,6 +20,14 @@ app.set('view engine', 'handlebars');
 
 app.get("/", (req, res) => {
 	res.end();
+	res.render("botlist", {
+		bots: [
+			{
+				id: ""
+				src: 
+			}
+		]
+	});
 });
 
 var managementserver = net.createServer((c) => {
@@ -35,7 +43,13 @@ var managementserver = net.createServer((c) => {
 				break;
 			case 0x41:
 				console.log("register");
-				console.log(new Buffer([data[1], data[2], data[3], data[4]]));
+				var hex = new Buffer([data[1], data[2], data[3], data[4]]);
+				console.log(hex);
+				Bot.findOne({ hex: hex.toString("hex") }, (err, bot) => {
+					bot.update({ $set: { lastup: Date.now() } }, (err, doc) => {
+						
+					});
+				});
 				break;
 		}
 	});

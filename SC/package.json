@@ -6,9 +6,11 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.4",
     "express-handlebars": "^2.0.1",
-    "mongoose": "^4.3.6"
+    "rpio": "^0.9.7",
+    "serialport": "^2.0.6"
   },
   "private": true
 }
