@@ -6,6 +6,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+	"mongoose": "^4.3.6",
     "express": "^4.13.4",
     "express-handlebars": "^2.0.1"
   },
