@@ -1,0 +1,23 @@
+main {
+	padding-bottom: 0;
+}
+form.container #message {
+	height: 34px;
+	font-size: 14px;
+}
+
+.list-group-item:last-child {
+	margin-bottom: 56px;
+}
+.list-group .isself {
+	text-align: right;
+}
+.list-group small {
+	color: #888;
+}
+//form[name=messageform] {
+form[name=messageform] .input-group {
+//	position: fixed;
+	bottom: 10px;
+	z-index: 10;
+}
