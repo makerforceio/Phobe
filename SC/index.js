@@ -67,6 +67,8 @@ app.put("/bot/:id/pitch", (req, res) => {
 	methods.pitch.set(req.body.angle * 1);
 });
 
+app.use(express.static(path.join(__dirname, "assets")));
+
 app.listen(8080, () => {
 	console.log("list");
 });
