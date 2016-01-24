@@ -1,0 +1,53 @@
+.navbar-brand-icon{
+	height:5em;
+	display: inline-block;
+	float:none;
+	margin-right: 8px;
+	margin-top:-10px;
+}
+.placeholder-stream {
+	width: 640px;
+	height: 480px;
+	background-color: 0;
+}
+.nav-text{
+	font-size: 25px;
+}
+.bg-colour{
+	background-color: #65C8D0;
+}
+.bar-colour{
+	background-color: #FFFFFF;
+}
+.stream-bg{
+	background-color: #75D8E0;
+}
+.info-bg{
+	background-color: #85E8F0;
+}
+.navbar .navbar-brand {
+	padding-top: 1em;
+	font-size : 26px;
+    height: 2px;
+}
+i.enable-button{
+	cursor: pointer;
+	display: inline-block;
+	-moz-transition: all 0.15s ease;
+	-o-transition: all 0.15s ease;
+	-webkit-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+	color: white;
+	padding: 0.25em;
+	position: relative;
+	background: transparent;
+	margin-left: 0.10em;
+	
+	color: #27BA02;
+	border: 2px solid;
+}
+i.enable-button:hover{
+	border-radius:50%;
+	color: white;
+	background: #27BA02;
+}

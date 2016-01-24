@@ -10,25 +10,14 @@
 	</div>
 	{{/if}}
 	{{#with item}}
-	<div class="row">
-		<div class="col-md-7 col-sm-12 col-xs-12">
-			<video></video>
-		</div>
-		<div class="col-md-5 col-sm-12 col-xs-12">
-			<div class="card right item-details row">
-				<div class="col-md-11 col-sm-12 col-xs-12">
-					<h2>ID: {{id}}</h2>
-					{{#if online}}
-						<h2><i class="fa fa-check-circle" style="color:#08E300;"></i> Online</h2>
-					{{else}}
-						<h2><i class="fa fa-times-circle" style="color:#DED5D5;"></i> Offline</h2>
-					{{/if}}
-				</div>
-				<div class="col-md-1 col-sm-12 col-xs-12">
-				
-				</div>
+		<div class="row">
+			<div class="col-md-7 col-sm-12 col-xs-12">
+				<video src=""></video>
 			</div>
-		</div>
-    </div>  
+			<div class="col-md-5 col-sm-12 col-xs-12">
+				<h2>Connected: {{#if online}}<i class="fa fa-check-circle" style="color:#08E300;"></i>{{else}}<i class="fa fa-times-circle" style="color:#DED5D5;"></i>{{/if}}</h2>
+				
+			</div>
+		</div>   
 	{{/with}}
 </main>
